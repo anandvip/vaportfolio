@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Innovator's Showcase</title>
+    <style>
+        /* ... (previous styles remain the same) ... */
+      
+            :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+            --card-background: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+      .demo-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .demo-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+ 
+          background-image:url("https://raw.githubusercontent.com/anandvip/kali-yuga/main/vasquarewebp.webp");
+          background-position:center;
+          background-size:cover;
+          background-repeat:no-repeat;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            height: 200px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tool-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-control.prev {
+            left: 10px;
+        }
+
+        .carousel-control.next {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .carousel-indicator.active {
+            background-color: white;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        .card-details {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .card-details span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .demo-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .demo-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* ... (rest of the styles remain the same) ... */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="/api/placeholder/80/80" alt="" class="logo">
+                <div>
+                    <h1>Vipul Anand</h1>
+                    <p>Built with AI Showcase</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid" id="toolsGrid">
+            <!-- Tool cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>About Me</h3>
+            <p>I'm an AI enthusiast and innovator, constantly exploring new ways to leverage artificial intelligence in creative and practical applications.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tools = [
+            {
+                name: "AI Image format convertor",
+                description: "Create stunning AI-generated images with our advanced tool. Unleash your creativity and explore endless visual possibilities.",
+                logo: "/api/placeholder/50/50",
+                images: [
+                    "https://images.unsplash.com/photo-1617361194384-1852022fe186?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjEwMDU4NzN8&ixlib=rb-4.0.3&q=80&w=400",
+                    "https://images.unsplash.com/photo-1495706770295-2eb900df3645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjEwMDU4NzN8&ixlib=rb-4.0.3&q=80&w=400",
+                    "https://images.unsplash.com/photo-1528319725582-ddc096101511?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjEwMDU4NzN8&ixlib=rb-4.0.3&q=80&w=400",
+                ],
+                date: "2023-07-15",
+                publisher: "Vipul Anand",
+                toolsUsed: "TensorFlow, PyTorch, DALL-E API",
+                audience: "Designers and Creative Professionals",
+                demoLink: "https://example.com/ai-image-generator-demo"
+            },
+            {
+                name: "just a passing thought",
+                description: "think of bikers as a community like a religion ",
+               logo: "https://raw.githubusercontent.com/anandvip/religionIndia/main/tools%20/images/religion%20nbikers.webp?raw=true",
+                images: ["https://github.com/anandvip/religionIndia/blob/main/tools%20/images/Kurukshetra-religion.png?raw=true", "https://github.com/anandvip/religionIndia/blob/main/tools%20/images/bikerreligion.png?raw=true", "/api/placeholder/400/200"],
+                date: "2023-08-01",
+                publisher: "Vipul Anand",
+                toolsUsed: "flat 2d images prompted at openai, layout prompted with sonnet3.5 claude.ai,",
+                audience: "Anyone, everyone, bikers",
+                demoLink: "https://anandvip.github.io/religionIndia/"
+            },];
+      
+ //use this template for a card: {
+          //       name: "just a passing thought",
+          //       description: "think of bikers as a community like a religion ",
+          //       logo: "/api/placeholder/50/50",
+          //       images: ["/api/placeholder/400/200", "/api/placeholder/400/200", "/api/placeholder/400/200"],
+          //       date: "2023-08-01",
+          //       publisher: "Vipul Anand",
+          //       toolsUsed: "flat 2d images prompted at openai, layout prompted with sonnet3.5 claude.ai,",
+          //       audience: "Anyone, everyone, bikers",
+          //       demoLink: "https://example.com/ai-text-analyzer-demo"
+          //   },
+    
+
+        function createToolCard(tool) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        ${tool.images.map(img => `
+                            <div class="carousel-item">
+                                <img src="${img}" alt="${tool.name}">
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="tool-logo">
+                        <img src="${tool.logo}" alt="${tool.name} logo">
+                    </div>
+                    <button class="carousel-control prev">&lt;</button>
+                    <button class="carousel-control next">&gt;</button>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">${tool.name}</h2>
+                    <p class="card-description">${tool.description}</p>
+                    <div class="tool-info">
+                        <p><strong>Date:</strong> ${tool.date}</p>
+                        <p><strong>Publisher:</strong> ${tool.publisher}</p>
+                        <p><strong>Tools Used:</strong> ${tool.toolsUsed}</p>
+                        <p><strong>Intended Audience:</strong> ${tool.audience}</p>
+                    </div>
+                    ${tool.demoLink ? `<a href="${tool.demoLink}" target="_blank" class="demo-link">Try Demo</a>` : ''}
+                </div>
+            `;
+            return card;
+        }
+
+
+      
+
+        function initializeCarousel(card) {
+            const carousel = card.querySelector('.carousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const items = carousel.querySelectorAll('.carousel-item');
+            const prevButton = carousel.querySelector('.carousel-control.prev');
+            const nextButton = carousel.querySelector('.carousel-control.next');
+            const indicators = carousel.querySelectorAll('.carousel-indicator');
+            let currentIndex = 0;
+            let startX, moveX;
+
+            function showImage(index) {
+                carouselInner.style.transform = `translateX(-${index * 100}%)`;
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % items.length;
+                showImage(currentIndex);
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showImage(currentIndex);
+            }
+
+            prevButton.addEventListener('click', prevImage);
+            nextButton.addEventListener('click', nextImage);
+
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+
+            carousel.addEventListener('touchmove', (e) => {
+                moveX = e.touches[0].clientX;
+            });
+
+            carousel.addEventListener('touchend', () => {
+                if (startX - moveX > 50) {
+                    nextImage();
+                } else if (moveX - startX > 50) {
+                    prevImage();
+                }
+            });
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    showImage(currentIndex);
+                });
+            });
+
+            let intervalId = setInterval(nextImage, 5000);
+
+            carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
+            carousel.addEventListener('touchstart', () => clearInterval(intervalId));
+
+            carousel.addEventListener('mouseleave', () => {
+                intervalId = setInterval(nextImage, 5000);
+            });
+            carousel.addEventListener('touchend', () => {
+                intervalId = setInterval(nextImage, 5000);
+            });
+        }
+
+        const toolsGrid = document.getElementById('toolsGrid');
+        tools.forEach(tool => {
+            const card = createToolCard(tool);
+            toolsGrid.appendChild(card);
+            initializeCarousel(card);
+        });
+        // ... (rest of the JavaScript remains the same) ...
+    </script>
+</body>
+</html>
